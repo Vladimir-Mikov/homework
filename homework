@@ -1,0 +1,12 @@
+#!/bin/bash
+echo "Enter Home dir name"
+read DIR
+if [ -d "$DIR" ]; then
+	echo "$DIR already exists, skipping step"
+else
+	mkdir $DIR
+	echo "Creating folder and writing date in $DIR/content.txt"
+fi
+date >> $DIR/content.txt
+wc -l $DIR/content.txt
+output=$(tail -n1 $DIR/content.txt)

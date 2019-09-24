@@ -1,0 +1,5 @@
+#!/bin/bash	
+_now=$(date +"%Y%m")
+file=~/${_now}_rds.csv
+echo $_now >> $file
+echo "Current date and time written to $file"
